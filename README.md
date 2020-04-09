@@ -19,3 +19,5 @@ $H_a$: Single unit property value is dependent on square footage, number of bedr
 ## Nice to Haves
 1. Feature scaling
 2. Feature engineering
+3. Writing zillow_data.csv from query
+4. Writing california_fips.csv from clipboard
