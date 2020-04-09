@@ -13,3 +13,9 @@ This repository holds all resources used in the attainment of the goals establis
 $H_0$: Single unit property value is independent of square footage, number of bedrooms, and number of bathrooms
 
 $H_a$: Single unit property value is dependent on square footage, number of bedrooms, and number of bathrooms
+
+## Instructions for Cloning
+
+## Nice to Haves
+1. Feature scaling
+2. Feature engineering
