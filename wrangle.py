@@ -12,8 +12,10 @@ FROM properties_2017 as prop
 JOIN predictions_2017 as pred USING(parcelid)
 JOIN propertylandusetype as plut USING(propertylandusetypeid)
 WHERE prop.propertylandusetypeid = 261
-AND pred.transactiondate >= "2017-05-01"
-AND pred.transactiondate <= "2017-06-30"
+AND (pred.transactiondate >= "2017-05-01"
+AND pred.transactiondate <= "2017-06-30")
+AND prop.bathroomcnt > 0.0
+AND prop.bedroomcnt > 0.0
 ORDER BY pred.transactiondate;
 """
 
@@ -23,7 +25,7 @@ def wrangle_zillow():
     df = pd.read_sql(zillow_query, url)
     df["fips"] = df["fips"].astype("int")
     df["county"] = df["fips"].map({6037: "Los Angeles County", 6059: "Orange County", 6111: "Ventura County"})
-    df.rename(columns={"bathroomcnt": "bathrooms", "bedroomcnt": "bedrooms", "calculatedfinishedsquarefeet": "square_feet", "fips": "fips_code", "propertylandusedesc": "property_description", "taxvaluedollarcnt": "tax_value", "taxamount": "tax_amount", "transactiondate": "transaction_date"}, inplace=True)
+    df.rename(columns={"bathroomcnt": "bathrooms", "bedroomcnt": "bedrooms", "calculatedfinishedsquarefeet": "square_feet", "fips": "fips_code", "propertylandusedesc": "property_description", "taxvaluedollarcnt": "home_value", "taxamount": "tax_amount", "transactiondate": "transaction_date"}, inplace=True)
     df = df.dropna()
     df.reset_index(inplace=True)
     df.drop(columns="index", inplace=True)

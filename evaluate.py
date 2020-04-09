@@ -43,7 +43,7 @@ def regression_errors(y, yhat, df):
     })
 
 # perhaps, add a baseline_calc argument that can be set to either mean or median so that logic can be added to the function to calculate the baseline within
-def baseline_mean_errors(y, yhat_baseline, df):
+def baseline_errors(y, yhat_baseline, df):
     return pd.Series({
         "SSE_baseline": mean_squared_error(y, yhat_baseline)*df.shape[0],
         "MSE_baseline": mean_squared_error(y, yhat_baseline),
@@ -55,11 +55,11 @@ def better_than_baseline(y, yhat, yhat_baseline, df):
     Compares root mean square error of predictions and baseline to determine if the model is better than our baseline
     """
     RMSE = regression_errors(y, yhat, df)["RMSE"]
-    RMSE_baseline = baseline_mean_errors(y, yhat_baseline, df)["RMSE_baseline"]
+    RMSE_baseline = baseline_errors(y, yhat_baseline, df)["RMSE_baseline"]
     if RMSE < RMSE_baseline:
-        return True
+        return print("Model performs better than baseline")
     else:
-        return False
+        return print("Model does not predict better than baseline, and is therefore useless")
 
 # return to optimize this one using Zach's solution
 def model_significance(ols_model):
