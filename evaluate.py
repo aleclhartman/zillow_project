@@ -66,5 +66,9 @@ def model_significance(ols_model):
     """
     Takes in an ordinary least squares model and returns the p-value of the F-statistic
     """
+    r2 = ols_model.rsquared
     f_pval = ols_model.f_pvalue
-    return print(f"p-value for model significance = {f_pval}")
+    return {
+        "r^2 -- explained variance": r2,
+        "p-value for model significance": f_pval
+        }
