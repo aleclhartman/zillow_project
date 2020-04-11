@@ -30,7 +30,7 @@ def plot_residuals(actual, predicted):
     plt.scatter(actual, residuals)
     plt.ylabel('residual ($y - \hat{y}$)')
     plt.xlabel('actual value ($y$)')
-    plt.title('Actual vs Residual')
+    plt.title(f'Actual vs Residual ({predicted.name})')
     return plt.gca()
 
 def regression_errors(y, yhat, df):
