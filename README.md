@@ -4,15 +4,16 @@
 This repository holds all resources used in the attainment of the goals established for the Zillow Linear Regresssion Project.
 
 ## Goals
-1. Develop a model to predict home values using square feet, bedrooms, and bathrooms. Do this for each feature first then in combination.
-2. Create a summary presentation about the drivers of single unit property values
+1. Develop a model to predict home values using square feet, bedrooms, and bathrooms.
+2. Create a summary presentation describing the drivers of single unit property values.
 3. Plot distributions of tax rates for each county, and provide key measures of central tendency and measures of spread.
 
-## Hypothesis
+## Null Hypothesis
 
 Single unit property value is independent of square footage, number of bedrooms, and number of bathrooms
 
 ## Instructions for Cloning
+- All necessary files to replicate the analysis in zillow_project_pipeline.ipynb are contained within this repository.
 
 ## Possible Variable Interactions
 - The number of bathrooms may be dependent on the number of bedrooms
