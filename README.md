@@ -5,7 +5,7 @@ This repository holds all resources used in the attainment of the goals establis
 
 ## Goals
 1. Develop a model to predict home values using square feet, bedrooms, and bathrooms.
-2. Create a summary presentation describing the drivers of single unit property values.
+2. Create a summary [presentation](https://docs.google.com/presentation/d/1ECtW4r91m_6WJGXTojXHFAnLWTK0KJ-z5euiXm5XgHI/edit?usp=sharing) describing the drivers of single unit property values.
 3. Plot distributions of tax rates for each county, and provide key measures of central tendency and measures of spread.
 
 ## Null Hypothesis
@@ -13,7 +13,7 @@ This repository holds all resources used in the attainment of the goals establis
 Single unit property value is independent of square footage, number of bedrooms, and number of bathrooms
 
 ## Instructions for Cloning
-- All necessary files to replicate the analysis in zillow_project_pipeline.ipynb are contained within this repository.
+- All files necessary for the replication of the analysis in zillow_project_pipeline.ipynb are contained within this repository.
 
 ## Possible Variable Interactions
 - The number of bathrooms may be dependent on the number of bedrooms

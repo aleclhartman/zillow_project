@@ -64,7 +64,7 @@ def better_than_baseline(y, yhat, yhat_baseline, df):
 # return to optimize this one using Zach's solution
 def model_significance(ols_model):
     """
-    Takes in an ordinary least squares model and returns the p-value of the F-statistic
+    Takes in an ordinary least squares model and returns the r squared and p-value of the F-statistic
     """
     r2 = ols_model.rsquared
     f_pval = ols_model.f_pvalue
